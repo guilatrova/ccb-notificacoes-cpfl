@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM for CPFL notifications for CCB
+
+Globals:
+    Function:
+        Timeout: 30
+
+Resources:
+
+    CPFLFunction:
+        Type: AWS::Serverless::Function
+        Properties:
+            FunctionName: CCB_NotificarCPFL
+            Description: >
+                Verifica todas as contas da CPFL em aberto de todas instalações da região de Cubatão e envia
+                por e-mail para os interessados, destacando quais estão vencidas
+            CodeUri: src/
+            Handler: cpfl.lambda_handler
+            Runtime: python3.7
+            Events:
+                Web:
+                    Type: Api
+                    Properties:
+                        Path: /cpfl
+                        Method: get

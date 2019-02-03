@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>#TITULO#</h1>
+
+    <h3>Contas vencidas</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Localidade</th>
+                <th>Mês referente</th>
+                <th>Vencimento</th>
+                <th>Valor</th>
+                <th>Código de Barras</th>
+            </tr>
+        </thead>
+        <tbody>
+            #LINHAS_VENCIDAS#
+        </tbody>
+    </table>
+
+    <h3>Contas em aberto</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Localidade</th>
+                <th>Mês referente</th>
+                <th>Vencimento</th>
+                <th>Valor</th>
+                <th>Código de Barras</th>
+            </tr>
+        </thead>
+        <tbody>
+            #LINHAS_ABERTO#
+        </tbody>
+    </table>
+
+    #ERROS#
+
+    <p>E-mail enviado automaticamente.</p>
+</body>
+
+</html>
