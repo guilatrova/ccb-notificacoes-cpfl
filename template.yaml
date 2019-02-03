@@ -19,6 +19,10 @@ Resources:
             Handler: cpfl.lambda_handler
             Runtime: python3.7
             Events:
+                EveryWednesday:
+                    Type: Schedule
+                    Properties:
+                        Schedule: cron(0 1 ? * WED *)
                 Web:
                     Type: Api
                     Properties:
