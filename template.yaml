@@ -4,7 +4,7 @@ Description: SAM for CPFL notifications for CCB
 
 Globals:
     Function:
-        Timeout: 30
+        Timeout: 60
 
 Resources:
 
